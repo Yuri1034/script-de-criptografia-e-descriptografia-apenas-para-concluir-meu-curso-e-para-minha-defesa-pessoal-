@@ -1,0 +1,92 @@
+🛡️ Guia de Prevenção e Defesa em Segurança da Informação
+🎯 Objetivo
+
+Reduzir riscos de ataques (malware, phishing, ransomware, etc.) por meio de camadas de proteção técnica e comportamental.
+
+🔍 1. Antivírus / Antimalware
+📌 O que é
+
+Software que detecta, bloqueia e remove ameaças como vírus, trojans e spyware.
+
+⚙️ Como funciona
+Assinaturas de malware conhecidos
+Heurística (comportamento suspeito)
+Machine Learning (detecção avançada)
+✅ Boas práticas
+Manter sempre atualizado
+Ativar proteção em tempo real
+Fazer varreduras periódicas
+Não usar múltiplos antivírus simultaneamente
+🧠 Exemplos conhecidos
+Windows Defender
+Kaspersky
+Bitdefender
+🔥 2. Firewall
+📌 O que é
+
+Sistema que controla o tráfego de rede (entrada e saída), bloqueando acessos não autorizados.
+
+⚙️ Tipos
+Firewall de rede (roteador, empresa)
+Firewall de host (no próprio computador)
+✅ Boas práticas
+Manter ativo sempre
+Bloquear portas desnecessárias
+Permitir apenas aplicativos confiáveis
+Monitorar conexões suspeitas
+🧠 Exemplos
+Windows Firewall
+pfSense
+🧪 3. Sandboxing
+📌 O que é
+
+Execução de arquivos ou programas em ambiente isolado para evitar danos ao sistema principal.
+
+⚙️ Como funciona
+Cria um “ambiente seguro” separado
+Impede acesso ao sistema real
+Ideal para testar arquivos suspeitos
+✅ Boas práticas
+Usar para abrir arquivos desconhecidos
+Testar softwares antes de instalar
+Integrar com análise de malware
+🧠 Exemplos
+Sandboxie
+Cuckoo Sandbox
+Windows Sandbox
+👤 4. Conscientização do Usuário
+📌 O fator mais importante
+
+Grande parte dos ataques explora erro humano (engenharia social).
+
+⚠️ Principais ameaças
+Phishing (e-mails falsos)
+Downloads maliciosos
+Links suspeitos
+Engenharia social
+✅ Boas práticas
+Nunca clicar em links desconhecidos
+Verificar remetente de e-mails
+Não baixar arquivos de fontes duvidosas
+Usar senhas fortes e autenticação em 2 fatores (2FA)
+Manter sistema e apps atualizados
+🔐 Camadas Extras de Segurança
+🧩 Outras medidas importantes
+Atualizações automáticas (patches)
+Backup regular (offline ou na nuvem)
+Controle de acesso (princípio do menor privilégio)
+Criptografia de dados
+Monitoramento de logs
+🧱 Estratégia Ideal: Defesa em Camadas (Defense in Depth)
+
+Nenhuma solução isolada é suficiente. O ideal é combinar:
+
+Antivírus + Firewall
+Sandboxing + Monitoramento
+Tecnologia + Educação do usuário
+📊 Resumo
+Camada	Função principal
+Antivírus	Detectar e remover malware
+Firewall	Controlar tráfego de rede
+Sandboxing	Isolar ameaças
+Usuário	Evitar erros e ataques sociais
