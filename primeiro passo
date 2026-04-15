@@ -1,0 +1,58 @@
+from cryptography.fernet import Fernet
+import os
+
+# Gerar chave (faça isso apenas uma vez e guarde com segurança)
+def gerar_chave():
+    chave = Fernet.generate_key()
+    with open("chave.key", "wb") as f:
+        f.write(chave)
+
+# Carregar chave
+def carregar_chave():
+    return open("chave.key", "rb").read()
+
+# Criptografar arquivo
+def criptografar_arquivo(caminho):
+    chave = carregar_chave()
+    fernet = Fernet(chave)
+
+    with open(caminho, "rb") as arquivo:
+        dados = arquivo.read()
+
+    dados_criptografados = fernet.encrypt(dados)
+
+    with open(caminho, "wb") as arquivo:
+        arquivo.write(dados_criptografados)
+
+    print(f"Arquivo criptografado: {caminho}")
+
+# Descriptografar arquivo
+def descriptografar_arquivo(caminho):
+    chave = carregar_chave()
+    fernet = Fernet(chave)
+
+    with open(caminho, "rb") as arquivo:
+        dados = arquivo.read()
+
+    dados_descriptografados = fernet.decrypt(dados)
+
+    with open(caminho, "wb") as arquivo:
+        arquivo.write(dados_descriptografados)
+
+    print(f"Arquivo descriptografado: {caminho}")
+
+# Criar arquivo de teste
+def criar_arquivo_teste():
+    with open("teste.txt", "w") as f:
+        f.write("Este é um arquivo de teste.")
+    print("Arquivo teste.txt criado")
+
+# Execução
+if __name__ == "__main__":
+    if not os.path.exists("chave.key"):
+        gerar_chave()
+
+    criar_arquivo_teste()
+
+    criptografar_arquivo("teste.txt")
+    descriptografar_arquivo("teste.txt")
